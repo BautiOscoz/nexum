@@ -1,9 +1,4 @@
-// If nobody signed in, go back to the login page
 const role = localStorage.getItem("role");
-if (!role) {
-  window.location.href = "index.html";
-}
-
 // Menu options for each role
 const menus = {
   student: [
@@ -37,10 +32,4 @@ menus[role].forEach((item) => {
     <p data-i18n="${item.key}.desc"></p>
   `;
   menu.appendChild(card);
-});
-
-// Log out: forget the role and go back to login
-document.getElementById("logout").addEventListener("click", () => {
-  localStorage.removeItem("role");
-  window.location.href = "index.html";
 });

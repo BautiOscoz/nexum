@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexum · My project</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="dashboard.html" class="brand">
+        <span class="brand-logo">N</span> Nexum
+      </a>
+      <div class="topbar-actions">
+        <button id="lang-toggle" class="topbar-btn"></button>
+        <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+      </div>
+    </header>
+
+    <main class="container narrow">
+      <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
+
+      <!-- Form: shown when there is no project yet, or when editing -->
+      <section id="form-section">
+        <h1 data-i18n="project.formTitle"></h1>
+        <p class="subtitle" data-i18n="project.formSubtitle"></p>
+
+        <form id="project-form" class="form-card" novalidate>
+          <label for="title" data-i18n="project.title"></label>
+          <input
+            id="title"
+            type="text"
+            data-i18n-placeholder="project.title.ph"
+          />
+
+          <label for="description" data-i18n="project.description"></label>
+          <textarea
+            id="description"
+            rows="4"
+            data-i18n-placeholder="project.description.ph"
+          ></textarea>
+
+          <label for="members" data-i18n="project.members"></label>
+          <input
+            id="members"
+            type="text"
+            data-i18n-placeholder="project.members.ph"
+          />
+
+          <label for="objectives" data-i18n="project.objectives"></label>
+          <textarea
+            id="objectives"
+            rows="3"
+            data-i18n-placeholder="project.objectives.ph"
+          ></textarea>
+
+          <label for="beneficiaries" data-i18n="project.beneficiaries"></label>
+          <input
+            id="beneficiaries"
+            type="text"
+            data-i18n-placeholder="project.beneficiaries.ph"
+          />
+
+          <p id="form-error" class="form-error" hidden></p>
+          <button
+            type="submit"
+            class="btn-primary"
+            data-i18n="project.submit"
+          ></button>
+        </form>
+      </section>
+
+      <!-- Summary: shown once the proposal is submitted -->
+      <section id="view-section" hidden>
+        <div class="project-header">
+          <h1 id="view-title"></h1>
+          <span class="badge badge-pending" data-i18n="status.pending"></span>
+        </div>
+        <p class="subtitle">
+          <span data-i18n="project.submittedOn"></span>
+          <span id="view-date"></span>
+        </p>
+
+        <div class="form-card">
+          <h3 data-i18n="project.description"></h3>
+          <p id="view-description"></p>
+          <h3 data-i18n="project.members"></h3>
+          <ul id="view-members"></ul>
+          <h3 data-i18n="project.objectives"></h3>
+          <p id="view-objectives"></p>
+          <h3 data-i18n="project.beneficiaries"></h3>
+          <p id="view-beneficiaries"></p>
+        </div>
+
+        <button
+          id="edit-btn"
+          class="btn-secondary"
+          data-i18n="project.edit"
+        ></button>
+      </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/project.js"></script>
+  </body>
+</html>

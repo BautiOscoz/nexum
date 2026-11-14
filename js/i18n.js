@@ -71,6 +71,9 @@ function applyTranslations() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     el.textContent = translations[lang][el.dataset.i18n];
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    el.placeholder = translations[lang][el.dataset.i18nPlaceholder];
+  });
   const toggle = document.getElementById("lang-toggle");
   if (toggle) toggle.textContent = translations[lang]["lang.switch"];
 }

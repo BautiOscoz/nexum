@@ -206,3 +206,214 @@ h3 {
   font-size: 14px;
   color: var(--muted);
 }
+/* ---------- Forms ---------- */
+.container.narrow {
+  max-width: 680px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.form-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-card label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.form-card input,
+.form-card textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+
+.form-card h3 {
+  font-size: 16px;
+  color: var(--primary);
+  margin-top: 14px;
+}
+.form-card h3:first-child {
+  margin-top: 0;
+}
+.form-card ul {
+  padding-left: 20px;
+}
+
+.form-error {
+  background: #fdecec;
+  color: #b42318;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  margin-top: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* ---------- Status badges ---------- */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badge-pending {
+  background: #fff4d6;
+  color: #8a5a00;
+}
+/* ---------- Table page ---------- */
+.container.wide {
+  max-width: 1200px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0 8px;
+}
+
+.toolbar input,
+.toolbar select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 15px;
+  background: white;
+}
+
+.toolbar input {
+  flex: 1;
+  min-width: 240px;
+}
+
+.count {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.data-table th {
+  background: #eef1fa;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-table th:hover {
+  background: #e2e7f7;
+}
+.data-table tbody tr:hover {
+  background: #f8f9fd;
+}
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 32px;
+}
+
+.muted {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- More status badges ---------- */
+.badge-approved {
+  background: #dcf5e3;
+  color: #1a7f37;
+}
+.badge-observed {
+  background: #e3ecff;
+  color: #1f4fbf;
+}
+.badge-rejected {
+  background: #fdecec;
+  color: #b42318;
+}
