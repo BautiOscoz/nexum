@@ -11,7 +11,7 @@ const menus = {
   teacher: [
     { icon: "📋", key: "menu.projects", page: "projects.html" },
     { icon: "✅", key: "menu.feedback", page: "feedback.html" },
-    { icon: "🔍", key: "menu.audits", page: "audits.html" },
+    { icon: "🔍", key: "menu.audits", page: "meetings.html" },
     { icon: "📅", key: "menu.calendar", page: "calendar.html" },
     { icon: "💬", key: "menu.messages", page: "messages.html" },
   ],

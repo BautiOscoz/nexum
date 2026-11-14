@@ -417,3 +417,94 @@ h3 {
   background: #fdecec;
   color: #b42318;
 }
+/* ---------- Meetings ---------- */
+.form-card select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 15px;
+  background: white;
+}
+
+.form-card h2 {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.meeting-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.meeting-header h2 {
+  font-size: 18px;
+  color: var(--primary);
+}
+.meeting-card p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+.meeting-card h3 {
+  font-size: 15px;
+  color: var(--primary);
+  margin: 16px 0 8px;
+}
+
+.comments {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comments li {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.small-muted {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.comment-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  resize: vertical;
+}
+
+.comment-form button {
+  align-self: flex-start;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 20px;
+  background: white;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}

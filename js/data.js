@@ -87,3 +87,56 @@ function getAllProjects() {
   }
   return projects;
 }
+// ---------- Sample meetings (demo data) ----------
+const SAMPLE_MEETINGS = [
+  {
+    id: 1,
+    team: "G1",
+    date: "2026-06-20T10:00",
+    auditor: "Federico Ruiz",
+    topics: "Requirements review and use cases",
+    comments: [
+      {
+        role: "teacher",
+        text: "Good progress. Please add the missing sequence diagrams.",
+        at: "2026-06-20T11:00",
+      },
+    ],
+  },
+  {
+    id: 2,
+    team: "G2",
+    date: "2026-07-02T15:30",
+    auditor: "Laura Ferreyra",
+    topics: "Prototype demo and test plan",
+    comments: [],
+  },
+  {
+    id: 3,
+    team: "G3",
+    date: "2026-12-03T09:00",
+    auditor: "Diego Altamirano",
+    topics: "Follow-up on observed proposal",
+    comments: [],
+  },
+  {
+    id: 4,
+    team: "G1",
+    date: "2026-12-10T10:00",
+    auditor: "Federico Ruiz",
+    topics: "Sprint 2 progress report",
+    comments: [],
+  },
+];
+
+// Meetings are saved in the browser after the first change
+function getMeetings() {
+  const saved = localStorage.getItem("meetings");
+  return saved
+    ? JSON.parse(saved)
+    : JSON.parse(JSON.stringify(SAMPLE_MEETINGS));
+}
+
+function saveMeetings(meetings) {
+  localStorage.setItem("meetings", JSON.stringify(meetings));
+}
