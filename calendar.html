@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexum · Calendar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      <span class="brand-logo">N</span> Nexum
+    </a>
+    <div class="topbar-actions">
+      <button id="lang-toggle" class="topbar-btn"></button>
+      <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+    </div>
+  </header>
+
+  <main class="container ">
+    <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
+    <h1 data-i18n="cal.title"></h1>
+    <p id="cal-subtitle" class="subtitle"></p>
+    <p id="read-only" class="small-muted" data-i18n="cal.readOnly" hidden></p>
+
+    <div class="cal-nav">
+      <button id="prev-month" class="btn-secondary" data-i18n="cal.prev"></button>
+      <h2 id="month-label"></h2>
+      <button id="next-month" class="btn-secondary" data-i18n="cal.next"></button>
+    </div>
+
+    <div id="cal-grid" class="cal-grid"></div>
+
+    <div class="cal-legend">
+      <span><i class="cal-dot evt-deadline"></i><span data-i18n="evt.deadline"></span></span>
+      <span><i class="cal-dot evt-meeting"></i><span data-i18n="evt.meeting"></span></span>
+      <span><i class="cal-dot evt-evaluation"></i><span data-i18n="evt.evaluation"></span></span>
+      <span><i class="cal-dot evt-defense"></i><span data-i18n="evt.defense"></span></span>
+      <span><i class="cal-dot evt-reminder"></i><span data-i18n="evt.reminder"></span></span>
+    </div>
+
+    <div class="cal-bottom">
+      <section>
+        <h2 class="section-title" data-i18n="cal.monthEvents"></h2>
+        <ul id="month-events" class="event-list"></ul>
+      </section>
+
+      <!-- Only visible for teachers -->
+      <form id="event-form" class="form-card" novalidate hidden>
+        <h2 data-i18n="cal.add"></h2>
+
+        <label for="event-title" data-i18n="cal.eventTitle"></label>
+        <input id="event-title" type="text">
+
+        <label for="event-date" data-i18n="cal.date"></label>
+        <input id="event-date" type="date">
+
+        <label for="event-type" data-i18n="cal.type"></label>
+        <select id="event-type">
+          <option value="deadline" data-i18n="evt.deadline"></option>
+          <option value="evaluation" data-i18n="evt.evaluation"></option>
+          <option value="defense" data-i18n="evt.defense"></option>
+          <option value="reminder" data-i18n="evt.reminder"></option>
+        </select>
+
+        <label for="event-team" data-i18n="cal.team"></label>
+        <select id="event-team">
+          <option value="all" data-i18n="cal.allTeams"></option>
+        </select>
+
+        <p id="event-error" class="form-error" data-i18n="error.required" hidden></p>
+        <button type="submit" class="btn-primary" data-i18n="cal.addBtn"></button>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

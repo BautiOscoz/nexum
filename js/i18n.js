@@ -27,7 +27,7 @@ const translations = {
     "menu.feedback": "Feedback",
     "menu.feedback.desc": "Evaluate proposals and progress reports",
     "menu.audits": "Audits",
-    "menu.audits.desc": "Schedule and record technical audits",
+    "menu.audits.desc": "Schedule and record technical audits"
   },
   es: {
     "login.subtitle": "Gestión de proyectos integradores",
@@ -57,8 +57,8 @@ const translations = {
     "menu.feedback": "Devoluciones",
     "menu.feedback.desc": "Evaluá propuestas y reportes de avance",
     "menu.audits": "Auditorías",
-    "menu.audits.desc": "Agendá y registrá auditorías técnicas",
-  },
+    "menu.audits.desc": "Agendá y registrá auditorías técnicas"
+  }
 };
 
 function getLang() {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexum · Messages</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      <span class="brand-logo">N</span> Nexum
+    </a>
+    <div class="topbar-actions">
+      <button id="lang-toggle" class="topbar-btn"></button>
+      <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
+    <h1 data-i18n="msg.title"></h1>
+    <p id="msg-subtitle" class="subtitle"></p>
+
+    <div id="team-picker" class="toolbar" hidden>
+      <label for="msg-team" data-i18n="msg.team"></label>
+      <select id="msg-team"></select>
+    </div>
+
+    <div class="chat">
+      <div id="chat-log" class="chat-log"></div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" autocomplete="off" data-i18n-placeholder="msg.ph">
+        <button type="submit" class="btn-primary" data-i18n="msg.send"></button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/messages.js"></script>
+</body>
+</html>

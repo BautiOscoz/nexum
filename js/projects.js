@@ -18,7 +18,7 @@ Object.assign(translations.en, {
   "col.status": "Status",
   "col.submitted": "Submitted",
   "col.auditor": "Technical auditor",
-  "col.grade": "Grade",
+  "col.grade": "Grade"
 });
 
 Object.assign(translations.es, {
@@ -35,7 +35,7 @@ Object.assign(translations.es, {
   "col.status": "Estado",
   "col.submitted": "Presentado",
   "col.auditor": "Auditor técnico",
-  "col.grade": "Nota",
+  "col.grade": "Nota"
 });
 
 // ---------- Elements and state ----------
@@ -129,8 +129,7 @@ function render() {
 
   headers.forEach((th) => {
     const arrow = th.querySelector(".arrow");
-    arrow.textContent =
-      th.dataset.sort === sort.key ? (sort.dir === 1 ? " ▲" : " ▼") : "";
+    arrow.textContent = th.dataset.sort === sort.key ? (sort.dir === 1 ? " ▲" : " ▼") : "";
   });
 
   applyTranslations();

@@ -4,8 +4,7 @@ Object.assign(translations.en, {
   "meetings.title.student": "Meetings",
   "meetings.subtitle.student": "Audit meetings of your team and their notes.",
   "meetings.title.teacher": "Audits",
-  "meetings.subtitle.teacher":
-    "Schedule technical audits and follow up on every team.",
+  "meetings.subtitle.teacher": "Schedule technical audits and follow up on every team.",
   "meetings.schedule": "Schedule an audit",
   "meetings.team": "Team",
   "meetings.date": "Date and time",
@@ -21,20 +20,17 @@ Object.assign(translations.en, {
   "meetings.comment.ph": "Add a note about this meeting...",
   "meetings.addComment": "Add comment",
   "meetings.commentsAfter": "Comments open once the meeting has taken place.",
-  "meetings.empty.student":
-    "Your team has no meetings yet. They will show up here once a teacher schedules them.",
+  "meetings.empty.student": "Your team has no meetings yet. They will show up here once a teacher schedules them.",
   "meetings.empty.teacher": "No meetings for this team yet.",
-  "error.required": "Please complete all the fields.",
+  "error.required": "Please complete all the fields."
 });
 
 Object.assign(translations.es, {
   "nav.back": "← Volver al panel",
   "meetings.title.student": "Reuniones",
-  "meetings.subtitle.student":
-    "Reuniones de auditoría de tu equipo y sus notas.",
+  "meetings.subtitle.student": "Reuniones de auditoría de tu equipo y sus notas.",
   "meetings.title.teacher": "Auditorías",
-  "meetings.subtitle.teacher":
-    "Agendá auditorías técnicas y hacé el seguimiento de cada equipo.",
+  "meetings.subtitle.teacher": "Agendá auditorías técnicas y hacé el seguimiento de cada equipo.",
   "meetings.schedule": "Agendar una auditoría",
   "meetings.team": "Equipo",
   "meetings.date": "Fecha y hora",
@@ -49,12 +45,10 @@ Object.assign(translations.es, {
   "meetings.noComments": "Todavía no hay comentarios.",
   "meetings.comment.ph": "Agregá una nota sobre esta reunión...",
   "meetings.addComment": "Agregar comentario",
-  "meetings.commentsAfter":
-    "Los comentarios se habilitan cuando la reunión ya se realizó.",
-  "meetings.empty.student":
-    "Tu equipo todavía no tiene reuniones. Van a aparecer acá cuando un docente las agende.",
+  "meetings.commentsAfter": "Los comentarios se habilitan cuando la reunión ya se realizó.",
+  "meetings.empty.student": "Tu equipo todavía no tiene reuniones. Van a aparecer acá cuando un docente las agende.",
   "meetings.empty.teacher": "Este equipo todavía no tiene reuniones.",
-  "error.required": "Completá todos los campos.",
+  "error.required": "Completá todos los campos."
 });
 
 // ---------- Setup ----------
@@ -66,14 +60,13 @@ const teamFilter = document.getElementById("team-filter");
 const scheduleForm = document.getElementById("schedule-form");
 
 document.getElementById("page-title").dataset.i18n = "meetings.title." + role;
-document.getElementById("page-subtitle").dataset.i18n =
-  "meetings.subtitle." + role;
+document.getElementById("page-subtitle").dataset.i18n = "meetings.subtitle." + role;
 
 // ---------- Helpers ----------
 function formatDate(value) {
   return new Date(value).toLocaleString(getLang(), {
     dateStyle: "medium",
-    timeStyle: "short",
+    timeStyle: "short"
   });
 }
 
@@ -117,7 +110,7 @@ if (role === "teacher") {
       date,
       auditor: project?.auditor ?? "Demo Teacher",
       topics,
-      comments: [],
+      comments: []
     });
     saveMeetings(meetings);
 
@@ -146,7 +139,7 @@ function meetingCard(m) {
           <strong data-i18n="roles.${c.role}"></strong>
           <span class="small-muted">${formatDate(c.at)}</span>
           <p>${escapeHtml(c.text)}</p>
-        </li>`,
+        </li>`
     )
     .join("");
 
@@ -162,20 +155,16 @@ function meetingCard(m) {
     <p><strong data-i18n="meetings.topics"></strong>: ${escapeHtml(m.topics)}</p>
 
     <h3 data-i18n="meetings.comments"></h3>
-    ${
-      comments
-        ? `<ul class="comments">${comments}</ul>`
-        : `<p class="small-muted" data-i18n="meetings.noComments"></p>`
-    }
+    ${comments
+      ? `<ul class="comments">${comments}</ul>`
+      : `<p class="small-muted" data-i18n="meetings.noComments"></p>`}
 
-    ${
-      done
-        ? `<form class="comment-form">
+    ${done
+      ? `<form class="comment-form">
            <textarea rows="2" data-i18n-placeholder="meetings.comment.ph"></textarea>
            <button type="submit" class="btn-secondary" data-i18n="meetings.addComment"></button>
          </form>`
-        : `<p class="small-muted" data-i18n="meetings.commentsAfter"></p>`
-    }
+      : `<p class="small-muted" data-i18n="meetings.commentsAfter"></p>`}
   `;
 
   if (done) {

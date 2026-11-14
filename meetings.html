@@ -1,71 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexum · Meetings</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a href="dashboard.html" class="brand">
-        <span class="brand-logo">N</span> Nexum
-      </a>
-      <div class="topbar-actions">
-        <button id="lang-toggle" class="topbar-btn"></button>
-        <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexum · Meetings</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      <span class="brand-logo">N</span> Nexum
+    </a>
+    <div class="topbar-actions">
+      <button id="lang-toggle" class="topbar-btn"></button>
+      <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
+    <h1 id="page-title"></h1>
+    <p id="page-subtitle" class="subtitle"></p>
+
+    <!-- Only visible for teachers -->
+    <section id="teacher-tools" hidden>
+      <form id="schedule-form" class="form-card" novalidate>
+        <h2 data-i18n="meetings.schedule"></h2>
+
+        <label for="schedule-team" data-i18n="meetings.team"></label>
+        <select id="schedule-team"></select>
+
+        <label for="schedule-date" data-i18n="meetings.date"></label>
+        <input id="schedule-date" type="datetime-local">
+
+        <label for="schedule-topics" data-i18n="meetings.topics"></label>
+        <textarea id="schedule-topics" rows="2" data-i18n-placeholder="meetings.topics.ph"></textarea>
+
+        <p id="schedule-error" class="form-error" data-i18n="error.required" hidden></p>
+        <button type="submit" class="btn-primary" data-i18n="meetings.scheduleBtn"></button>
+      </form>
+
+      <div class="toolbar">
+        <select id="team-filter">
+          <option value="all" data-i18n="meetings.allTeams"></option>
+        </select>
       </div>
-    </header>
+    </section>
 
-    <main class="container narrow">
-      <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
-      <h1 id="page-title"></h1>
-      <p id="page-subtitle" class="subtitle"></p>
+    <div id="meeting-list"></div>
+  </main>
 
-      <!-- Only visible for teachers -->
-      <section id="teacher-tools" hidden>
-        <form id="schedule-form" class="form-card" novalidate>
-          <h2 data-i18n="meetings.schedule"></h2>
-
-          <label for="schedule-team" data-i18n="meetings.team"></label>
-          <select id="schedule-team"></select>
-
-          <label for="schedule-date" data-i18n="meetings.date"></label>
-          <input id="schedule-date" type="datetime-local" />
-
-          <label for="schedule-topics" data-i18n="meetings.topics"></label>
-          <textarea
-            id="schedule-topics"
-            rows="2"
-            data-i18n-placeholder="meetings.topics.ph"
-          ></textarea>
-
-          <p
-            id="schedule-error"
-            class="form-error"
-            data-i18n="error.required"
-            hidden
-          ></p>
-          <button
-            type="submit"
-            class="btn-primary"
-            data-i18n="meetings.scheduleBtn"
-          ></button>
-        </form>
-
-        <div class="toolbar">
-          <select id="team-filter">
-            <option value="all" data-i18n="meetings.allTeams"></option>
-          </select>
-        </div>
-      </section>
-
-      <div id="meeting-list"></div>
-    </main>
-
-    <script src="js/auth.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/meetings.js"></script>
-  </body>
+  <script src="js/auth.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/meetings.js"></script>
+</body>
 </html>

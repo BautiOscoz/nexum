@@ -1,80 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexum · Projects</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a href="dashboard.html" class="brand">
-        <span class="brand-logo">N</span> Nexum
-      </a>
-      <div class="topbar-actions">
-        <button id="lang-toggle" class="topbar-btn"></button>
-        <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexum · Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      <span class="brand-logo">N</span> Nexum
+    </a>
+    <div class="topbar-actions">
+      <button id="lang-toggle" class="topbar-btn"></button>
+      <button id="logout" class="topbar-btn" data-i18n="nav.logout"></button>
+    </div>
+  </header>
 
-    <main class="container wide">
-      <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
-      <h1 data-i18n="projects.title"></h1>
-      <p class="subtitle" data-i18n="projects.subtitle"></p>
+  <main class="container wide">
+    <a href="dashboard.html" class="back-link" data-i18n="nav.back"></a>
+    <h1 data-i18n="projects.title"></h1>
+    <p class="subtitle" data-i18n="projects.subtitle"></p>
 
-      <div class="toolbar">
-        <input
-          id="search"
-          type="search"
-          data-i18n-placeholder="projects.search.ph"
-        />
-        <select id="status-filter">
-          <option value="all" data-i18n="projects.filter.all"></option>
-          <option value="pending" data-i18n="status.pending"></option>
-          <option value="approved" data-i18n="status.approved"></option>
-          <option value="observed" data-i18n="status.observed"></option>
-          <option value="rejected" data-i18n="status.rejected"></option>
-        </select>
-      </div>
+    <div class="toolbar">
+      <input id="search" type="search" data-i18n-placeholder="projects.search.ph">
+      <select id="status-filter">
+        <option value="all" data-i18n="projects.filter.all"></option>
+        <option value="pending" data-i18n="status.pending"></option>
+        <option value="approved" data-i18n="status.approved"></option>
+        <option value="observed" data-i18n="status.observed"></option>
+        <option value="rejected" data-i18n="status.rejected"></option>
+      </select>
+    </div>
 
-      <p id="count" class="count"></p>
+    <p id="count" class="count"></p>
 
-      <div class="table-wrapper">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th data-sort="team">
-                <span data-i18n="col.team"></span><span class="arrow"></span>
-              </th>
-              <th data-sort="title">
-                <span data-i18n="col.title"></span><span class="arrow"></span>
-              </th>
-              <th data-sort="members">
-                <span data-i18n="col.members"></span><span class="arrow"></span>
-              </th>
-              <th data-sort="status">
-                <span data-i18n="col.status"></span><span class="arrow"></span>
-              </th>
-              <th data-sort="submittedAt">
-                <span data-i18n="col.submitted"></span
-                ><span class="arrow"></span>
-              </th>
-              <th data-sort="auditor">
-                <span data-i18n="col.auditor"></span><span class="arrow"></span>
-              </th>
-              <th data-sort="grade">
-                <span data-i18n="col.grade"></span><span class="arrow"></span>
-              </th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
-        </table>
-      </div>
-    </main>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th data-sort="team"><span data-i18n="col.team"></span><span class="arrow"></span></th>
+            <th data-sort="title"><span data-i18n="col.title"></span><span class="arrow"></span></th>
+            <th data-sort="members"><span data-i18n="col.members"></span><span class="arrow"></span></th>
+            <th data-sort="status"><span data-i18n="col.status"></span><span class="arrow"></span></th>
+            <th data-sort="submittedAt"><span data-i18n="col.submitted"></span><span class="arrow"></span></th>
+            <th data-sort="auditor"><span data-i18n="col.auditor"></span><span class="arrow"></span></th>
+            <th data-sort="grade"><span data-i18n="col.grade"></span><span class="arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </main>
 
-    <script src="js/auth.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/projects.js"></script>
-  </body>
+  <script src="js/auth.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/projects.js"></script>
+</body>
 </html>

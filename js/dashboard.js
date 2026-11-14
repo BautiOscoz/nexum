@@ -1,4 +1,5 @@
 const role = localStorage.getItem("role");
+
 // Menu options for each role
 const menus = {
   student: [
@@ -6,15 +7,15 @@ const menus = {
     { icon: "🤝", key: "menu.meetings", page: "meetings.html" },
     { icon: "📤", key: "menu.deliverables", page: "deliverables.html" },
     { icon: "📅", key: "menu.calendar", page: "calendar.html" },
-    { icon: "💬", key: "menu.messages", page: "messages.html" },
+    { icon: "💬", key: "menu.messages", page: "messages.html" }
   ],
   teacher: [
     { icon: "📋", key: "menu.projects", page: "projects.html" },
     { icon: "✅", key: "menu.feedback", page: "feedback.html" },
     { icon: "🔍", key: "menu.audits", page: "meetings.html" },
     { icon: "📅", key: "menu.calendar", page: "calendar.html" },
-    { icon: "💬", key: "menu.messages", page: "messages.html" },
-  ],
+    { icon: "💬", key: "menu.messages", page: "messages.html" }
+  ]
 };
 
 // Page title depends on the role
